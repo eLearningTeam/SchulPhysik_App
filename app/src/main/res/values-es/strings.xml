@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Schul Physic App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <string name="Weiter">Siguiente</string>
+    <string name="hello"> Descripción del programa</string>
+    <string name="title_activity_test_aufgabe">Schul Physic App</string>
+    <string name="chk_ios">OK</string>
+    <string name="title_activity_statistic">Estadística</string>
+    <string name="button_next_task">Siguiente</string>
+    <string name="button_prev_task">Regresar</string>
+
+    <string name="zuruck">Página principal</string>
+    <string name="Beenden">Finalizar</string>
+
+    <string name="Neu">Nuevo</string>
+    <string name="Beschreibung">Proceder</string>
+    <string name="Anleitung1">El usuario toma un papel y un lapiz </string>
+    <string name="Anleitung2">Comenzar el programa</string>
+    <string name="Anleitung3">Leer la tarea y acceder a ayuda cuando sea necesario</string>
+    <string name="Anleitung4">El usuario empieza la solución de la Tarea. Al mismo tiempo comenzara la cuenta regresiva. Para una tarea dificil hay mas tiempo</string>
+    <string name="Anleitung5">Opinión personal: El usuario debera de calificar su rendimiento en una escala de 1 a 5</string>
+    <string name="Anleitung6">Comparar con la solución dada</string>
+    <string name="Anleitung7">Ahora el usuario deberá seleccionar su porcentaje de precisión</string>
+    <string name="Anleitung8">Al final usted podrá ver sus estadisticas</string>
+    <string name="Anleitung">sd</string>
+
+    <string name="Einschätzung">Evaluación personal:</string>
+    <string name="Einschätzung1">muy inseguro </string>
+    <string name="Einschätzung2">inseguro</string>
+    <string name="Einschätzung3">neutral</string>
+    <string name="Einschätzung4">seguro</string>
+    <string name="Einschätzung5">muy seguro</string>
+    <string name="Einschätzung6"> </string>
+    <string name="loesung">He comparado mi solución con la solución dada, y he marcado todo ya sea correcto o incorrecto</string>
+    <string name="result">Control porcentual de precisión de mi solución</string>
+    <string name="richtigkeit">Chequear el porcentaje de exactitud de la solución</string>
+
+    <string name="zur_Lösung">Ver solución</string>
+    <string name="Lösung_ist_fertig">Solución completa</string>
+    <string name="Lösung_beginnen">Empezar la tarea</string>
+    <string name="Aufgabe">Tarea</string>
+    <string name="Zurück_zum_Start">Página principal</string>
+
+    <string name="chartResultTitle">Resulados de</string>
+    <string name="yResultTitle">Resultado</string>
+    <string name="chartTitle">Resultados de</string>
+    <string name="chartTimeTitle">Tiempo para</string>
+    <string name="yTimeTitle_1">Tiempo utilizado (min)</string>
+    <string name="yTimeTitle_2">Tiempo Tarea</string>
+    <string name="chartFeelTitle">Sentimiento para</string>
+    <string name="yFeelTitle">Sentimiento</string>
+    <string name="chartLineLegend">Recomendación</string>
+    <string name="chartBarLegend">Resultado</string>
+
+    <string name="xTimeTitle">Tiempo restante</string>
+    <string name="xFeelTitle">Sentimiento</string>
+    <string name="xResultTitle">Resultados</string>
+
+    <string name="congratulation">Felicitaciones !</string>
+    <string name="taskfinished">Usted ha terminado todas las tareas.</string>
+    <string name="endTextOne">Para empezar otra vez presione el boton "nuevo“ en la pantalla principal.  Todos los resultados serán eliminados.</string>
+    <string name="endTextTwo">Para ver de nuevo sus resultados, presione en el boton "Estadistica" en la pantalla principal.</string>
+    <string name="endTextThree">Para regresar a la pantalla principal, presione el boton "Pantalla principal".</string>
+
+    <string name="test">Test</string>
+    <string name="StartingTest">Empezar con el Test</string>
+    <string name="Message2Test">completado exitosamente</string>
+    <string name="secondMessage2Test">Por favor continúe con el siguiente Test</string>
+
+    <string name="StartingPool">Empezando con el Pool</string>
+    <string name="Message2Pool">El rendimiento minimo no ha sido alcanzado</string>
+    <string name="secondMessage2Pool">Por favor complete las tareas del Pool</string>
+</resources>

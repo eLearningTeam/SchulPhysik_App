@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instruction>
+    <head>Anleitung</head>
+    <intro>Información detallada de la ejecución del programa:</intro>
+    <step id="1">Toma lápiz y papel.</step>
+    <step id="2">Empieza con la primer tarea.</step>
+    <step id="3">Por favor, lea la tarea cuidadosamente y si es necesario, utilice la ayuda online.</step>
+    <step id="4">Comience la solución de la tarea.  El tiempo empezará a correr.  A mayor dificultad, mayor la cantidad de tiempo disponible.</step>
+    <step id="5">Evaluación Personal: Evalúe en una escala de enteros de 5 puntos, si te sientes completamente inseguro (-2) y muy seguro (+2).</step>
+    <step id="6">Compara tu solución con la solución ejemplo.</step>
+
+    <step id="7">Exactitud: Seleccione aquí el porcentaje en conformidad con la solución ejemplo.</step>
+
+    <step id="8">Estadísticas: Diagramas que muestran el resultado general para cada tarea de cada Test.  La línea amarilla indica el resultado promedio.  Bajo de la línea, significa que usted aún debe mejorar y arriba de la línea significa que usted esta bien o muy bien.</step>
+
+    <step id="8.1">Gráfica de evaluación personal: Posee una escala de -2 a +2, y la puntuación persnal debe de estar arriba de la línea amarilla.</step>
+
+    <step id="8.2">Gráfica de tiempo: esta se muestra en barras de alcance, donde el tiempo transcurrido es el punto mas bajo y el tiempo para la tarea es el punto más alto, El tiempo transcurrido debe de permanecer abajo de la línea amarilla.</step>
+
+    <step id="8.3">Gráfica de exactitud: se muestra en una gráfica de barras, la puntuación debe de estar por arriba de la línea amarilla.
+Para mostrar los diferentes tipos de gráficas (Resultados, tiempo y sentimiento), se debe de dar un toque sobre la estadística actual.</step>
+
+    <step id="Impressum:">Equipo de desarrollo: Tobias Kutzner, Christian Steinert, Abdellah Azendour, Carlos Trujillo, Lando Eisenmann, Prof. Dr.-Ing. Ingrid Bönninger, Prof. Dr. habil. Olga Wälder, Prof. Dr. Annemarie Jost</step>
+    <step id=" Kontakt:    "> Tobias.Kutzner@b-tu.de</step>
+</instruction>

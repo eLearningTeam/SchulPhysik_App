@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE test SYSTEM "test.dtd"> -->
+<test id="1" lang="deutsch">
+    <aufgaben>
+        <aufgabe id="1">
+            <text></text>
+            <bild></bild>
+            <hilfe>
+            </hilfe>
+            <loesung></loesung>
+            <time></time>
+            <avguc></avguc>
+            <avgdc></avgdc>
+            <avguf></avguf>
+            <avgdf></avgdf>
+            <avgut></avgut>
+            <avgdt></avgdt>
+        </aufgabe>
+        <aufgabe id="2">
+            <text></text>
+            <bild></bild>
+            <hilfe>
+            </hilfe>
+            <loesung></loesung>
+            <time></time>
+            <avguc></avguc>
+            <avgdc></avgdc>
+            <avguf></avguf>
+            <avgdf></avgdf>
+            <avgut></avgut>
+            <avgdt></avgdt>
+        </aufgabe>
+        <aufgabe id="3">
+            <text></text>
+            <bild></bild>
+            <hilfe>
+            </hilfe>
+            <loesung></loesung>
+            <time></time>
+            <avguc></avguc>
+            <avgdc></avgdc>
+            <avguf></avguf>
+            <avgdf></avgdf>
+            <avgut></avgut>
+            <avgdt></avgdt>
+        </aufgabe>
+        <aufgabe id="4">
+            <text></text>
+            <bild></bild>
+            <hilfe>
+            </hilfe>
+            <loesung></loesung>
+            <time></time>
+            <avguc></avguc>
+            <avgdc></avgdc>
+            <avguf></avguf>
+            <avgdf></avgdf>
+            <avgut></avgut>
+            <avgdt></avgdt>
+        </aufgabe>
+        <aufgabe id="5">
+            <text></text>
+            <bild></bild>
+            <hilfe>
+            </hilfe>
+            <loesung></loesung>
+            <time></time>
+            <avguc></avguc>
+            <avgdc></avgdc>
+            <avguf></avguf>
+            <avgdf></avgdf>
+            <avgut></avgut>
+            <avgdt></avgdt>
+        </aufgabe>
+    </aufgaben>
+</test>

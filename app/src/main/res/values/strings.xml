@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Schul Physic App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <string name="Weiter">Next</string>
+    <string name="hello"> Description of the program</string>
+    <string name="title_activity_test_aufgabe">Schul Physic App</string>
+    <string name="chk_ios">OK</string>
+    <string name="title_activity_statistic">Statistic</string>
+    <string name="button_next_task">Next</string>
+    <string name="button_prev_task">Back</string>
+
+    <string name="zuruck">to the beginning</string>
+    <string name="Beenden">Finish</string>
+
+    <string name="Neu">New</string>
+    <string name="Beschreibung">Proceed</string>
+    <string name="Anleitung1">The user takes a pen and a slice of paper </string>
+    <string name="Anleitung2">start the programm</string>
+    <string name="Anleitung3">Reading the task and if needed use the online help</string>
+    <string name="Anleitung4">The user begins to solve the task. At the same time a countdown begins.For a harder task there is more time</string>
+    <string name="Anleitung5">Personal opinion: The user have to rate his performance on a scale from 1 to 5</string>
+    <string name="Anleitung6">Compere withe the solution given</string>
+    <string name="Anleitung7">Now the user has to select how many percent of the task where right</string>
+    <string name="Anleitung8">At the end you can see your statistic</string>
+    <string name="Anleitung">sd</string>
+
+    <string name="Einschätzung">My personal opinion I felt:</string>
+    <string name="Einschätzung1">very unsure </string>
+    <string name="Einschätzung2">unsure</string>
+    <string name="Einschätzung3">neutral</string>
+    <string name="Einschätzung4">sure</string>
+    <string name="Einschätzung5">very sure</string>
+    <string name="Einschätzung6"> </string>
+    <string name="loesung">I have compared my solution with the given one, an marked everything either right or wrong</string>
+    <string name="result">Control of the accuracy of my  solution in percent</string>
+    <string name="richtigkeit">Check the correctness of the solution in percent</string>
+
+    <string name="zur_Lösung">to the solution</string>
+    <string name="Lösung_ist_fertig">solution is completed</string>
+    <string name="Lösung_beginnen">start the task</string>
+    <string name="Aufgabe">Task</string>
+    <string name="Zurück_zum_Start">back to the start</string>
+
+    <string name="chartResultTitle">Results for</string>
+    <string name="yResultTitle">Result</string>
+    <string name="chartTitle">Results for</string>
+    <string name="chartTimeTitle">Time for</string>
+    <string name="yTimeTitle_1">Time Used (min)</string>
+    <string name="yTimeTitle_2">Time for Task</string>
+    <string name="chartFeelTitle">Feeling for</string>
+    <string name="yFeelTitle">Feeling</string>
+    <string name="chartLineLegend">Recomendation</string>
+    <string name="chartBarLegend">Result</string>
+
+    <string name="xTimeTitle">Time Left</string>
+    <string name="xFeelTitle">Feeling</string>
+    <string name="xResultTitle">Results</string>
+
+    <string name="congratulation">Congratulations !</string>
+    <string name="taskfinished">You have finished all the tasks.</string>
+    <string name="endTextOne">For starting again press the button „new“ in the main screen.  All the results will be deleted.</string>
+    <string name="endTextTwo">For looking to your results again, press the button „Statistic“ in the main screen.</string>
+    <string name="endTextThree">To go to the Main Screen press the button bellow „Back to the start“.</string>
+
+    <string name="test">Test</string>
+    <string name="StartingTest">Starting with the Test</string>
+    <string name="Message2Test">completed successfully</string>
+    <string name="secondMessage2Test">Please continue with the next Test</string>
+
+    <string name="StartingPool">Starting with the Pool</string>
+    <string name="Message2Pool">Minimum performance has not been reached</string>
+    <string name="secondMessage2Pool">Please complete the tasks from the Pool</string>
+</resources>
