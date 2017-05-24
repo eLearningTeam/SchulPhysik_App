@@ -1,4 +1,4 @@
-package com.lern.SchulPhysikApp;
+package com.lern.schulphysikapp;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

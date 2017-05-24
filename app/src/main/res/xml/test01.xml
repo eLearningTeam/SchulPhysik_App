@@ -3,73 +3,78 @@
 <test id="1" lang="deutsch">
 	<aufgaben>
 		<aufgabe id="1">
-			<text></text>
-			<bild></bild>
+			<text>task1</text>
+			<bild>task1</bild>
 			<hilfe>
+				<value>https://www.b-tu.de/</value>
 			</hilfe>
-			<loesung></loesung>
-			<time></time>
-			<avguc></avguc>
+			<loesung>task5</loesung>
+			<time>1</time>
+			<avguc>50</avguc>
 			<avgdc></avgdc>
-			<avguf></avguf>
+			<avguf>1</avguf>
 			<avgdf></avgdf>
-			<avgut></avgut>
+			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="2">
-			<text></text>
-			<bild></bild>
+			<text>task2</text>
+			<bild>task2</bild>
 			<hilfe>
+				<value>https://www.b-tu.de/</value>
 			</hilfe>
-			<loesung></loesung>
-			<time></time>
-			<avguc></avguc>
+			<loesung>task1</loesung>
+			<time>1</time>
+			<avguc>50</avguc>
 			<avgdc></avgdc>
-			<avguf></avguf>
+			<avguf>1</avguf>
 			<avgdf></avgdf>
-			<avgut></avgut>
+			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="3">
-			<text></text>
-			<bild></bild>
+			<text>task3</text>
+			<bild>task3</bild>
 			<hilfe>
+				<value>https://www.b-tu.de/</value>
 			</hilfe>
-			<loesung></loesung>
-			<time></time>
-			<avguc></avguc>
+			<loesung>task1</loesung>
+			<time>1</time>
+			<avguc>50</avguc>
 			<avgdc></avgdc>
-			<avguf></avguf>
+			<avguf>1</avguf>
 			<avgdf></avgdf>
-			<avgut></avgut>
+			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="4">
-			<text></text>
-			<bild></bild>
+			<text>task4</text>
+			<bild>task4</bild>
 			<hilfe>
+				<value>https://www.b-tu.de/</value>
 			</hilfe>
-			<loesung></loesung>
-			<time></time>
-			<avguc></avguc>
+			<loesung>task1</loesung>
+			<time>1</time>
+			<avguc>50</avguc>
 			<avgdc></avgdc>
-			<avguf></avguf>
+			<avguf>1</avguf>
 			<avgdf></avgdf>
-			<avgut></avgut>
+			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="5">
-			<text></text>
-			<bild></bild>
+			<text>task5</text>
+			<bild>task5</bild>
 			<hilfe>
+				<value>https://www.b-tu.de/</value>
 			</hilfe>
-			<loesung></loesung>
-			<time></time>
-			<avguc></avguc>
+			<loesung>task1</loesung>
+			<time>1</time>
+			<avguc>50</avguc>
 			<avgdc></avgdc>
-			<avguf></avguf>
+			<avguf>1</avguf>
 			<avgdf></avgdf>
-			<avgut></avgut>
+			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 	</aufgaben>

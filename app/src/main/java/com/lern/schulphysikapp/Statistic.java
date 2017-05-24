@@ -1,4 +1,4 @@
-package com.lern.SchulPhysikApp;
+package com.lern.schulphysikapp;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
