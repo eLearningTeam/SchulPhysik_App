@@ -115,6 +115,9 @@ public class MainActivity extends ActionBarActivity {
     public static int qntAufTest2 = 5;
     public static int qntAufTest3 = 5;
     // When Test result > qntPoolAufgaben --> 2 Aufgaben from the Pool
+    public static int qntRandomAufTest1 = 10;
+    public static int qntRandomAufTest2 = 10;
+    public static int qntRandomAufTest3 = 10;
 
     Button btnStatistic, btnWeiter, btnNew;;
 
@@ -338,136 +341,147 @@ public class MainActivity extends ActionBarActivity {
     public void changeOrder() {
         // Change the order of the Array List aufgb2Eval
         // So the exercises will be random displayed
-        System.out.println("--> ChangeOrder");
 
-        try {
-            Random randomGen = new Random();
-            ArrayList<Aufgabe> TempList = null;
-            Aufgabe tempAufOrdr = null;
-            int varRandom = 0;
-            int RandomCounter = 0;
-            boolean numClass1 = false;
-            boolean numClass2 = false;
-            boolean numClass3 = false;
-            boolean numClass4 = false;
-            boolean numClass5 = false;
-            boolean numClass6 = false;
-            boolean numClass7 = false;
-            boolean numClass8 = false;
-            boolean numClass9 = false;
-            boolean numClass10 = false;
+        if (n_Test == 1) {
+            System.out.println("--> ChangeOrder");
 
+            try {
+                Random randomGen = new Random();
+                ArrayList<Aufgabe> TempList = null;
+                Aufgabe tempAufOrdr = null;
+                int varRandom = 0;
+                int RandomCounter = 0;
+                boolean numClass1 = false;
+                boolean numClass2 = false;
+                boolean numClass3 = false;
+                boolean numClass4 = false;
+                boolean numClass5 = false;
+                boolean numClass6 = false;
+                boolean numClass7 = false;
+                boolean numClass8 = false;
+                boolean numClass9 = false;
+                boolean numClass10 = false;
 
-            TempList = new ArrayList<Aufgabe>();
+                TempList = new ArrayList<Aufgabe>();
 
-            while(RandomCounter < qntAufTest1) {
-                tempAufOrdr = new Aufgabe();
-                varRandom = randomGen.nextInt(qntAufTest1);
+                while(RandomCounter < qntAufTest1) {
+                    tempAufOrdr = new Aufgabe();
+                    varRandom = randomGen.nextInt(qntRandomAufTest1);
 
-                tempAufOrdr = aufgb2Eval.get(varRandom);
+                    tempAufOrdr = aufgb2Eval.get(varRandom);
 
-                switch(varRandom) {
-                    case 1:
-                        if (!numClass1) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass1 = true;
-                        break;
-                    case 2:
-                        if (!numClass2) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass2 = true;
-                        break;
-                    case 3:
-                        if (!numClass3) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass3 = true;
-                        break;
-                    case 4:
-                        if (!numClass4) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass4 = true;
-                        break;
-                    case 5:
-                        if (!numClass5) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass5 = true;
-                        break;
-                    case 6:
-                        if (!numClass6) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass6 = true;
-                        break;
-                    case 7:
-                        if (!numClass7) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass7 = true;
-                        break;
-                    case 8:
-                        if (!numClass8) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass8 = true;
-                        break;
-                    case 9:
-                        if (!numClass9) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass9 = true;
-                        break;
-                    case 10:
-                        if (!numClass10) {
-                            TempList.add(tempAufOrdr);
-                            RandomCounter++;
-                        }
-                        numClass10 = true;
-                        break;
-                } // switch
-            } // while
+                    switch(varRandom) {
+                        case 0:
+                            if (!numClass1) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass1 = true;
+                            break;
+                        case 1:
+                            if (!numClass2) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass2 = true;
+                            break;
+                        case 2:
+                            if (!numClass3) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass3 = true;
+                            break;
+                        case 3:
+                            if (!numClass4) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass4 = true;
+                            break;
+                        case 4:
+                            if (!numClass5) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass5 = true;
+                            break;
+                        case 5:
+                            if (!numClass6) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass6 = true;
+                            break;
+                        case 6:
+                            if (!numClass7) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass7 = true;
+                            break;
+                        case 7:
+                            if (!numClass8) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass8 = true;
+                            break;
+                        case 8:
+                            if (!numClass9) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass9 = true;
+                            break;
+                        case 9:
+                            if (!numClass10) {
+                                TempList.add(tempAufOrdr);
+                                System.out.println("random..." + varRandom);
+                                RandomCounter++;
+                            }
+                            numClass10 = true;
+                            break;
+                    } // switch
+                } // while
 
-            System.out.println("1");
-            aufgb2Eval = null;
-            System.out.println("2");
-            aufgb2Eval = TempList;
+                System.out.println("1");
+                aufgb2Eval = null;
+                System.out.println("2");
+                aufgb2Eval = TempList;
 
-            System.out.println("3");
-            for (int tilt=0; tilt < aufgb2Eval.size(); tilt++) {
-                System.out.println("3." + tilt);
-                System.out.println("task-- " + aufgb2Eval.get(tilt).getAufgabe());
-            }
+                System.out.println("3");
+                for (int tilt=0; tilt < aufgb2Eval.size(); tilt++) {
+                    System.out.println("3." + tilt);
+                    System.out.println("task-- " + aufgb2Eval.get(tilt).getAufgabe());
+                }
 
-            System.out.println("task--- " + aufgb2Eval.get(0).getAufgabe());
-            System.out.println("task--- " + aufgb2Eval.get(1).getAufgabe());
-            System.out.println("task--- " + aufgb2Eval.get(2).getAufgabe());
-            System.out.println("task--- " + aufgb2Eval.get(3).getAufgabe());
-            System.out.println("task--- " + aufgb2Eval.get(4).getAufgabe());
+                System.out.println("task--- " + aufgb2Eval.get(0).getAufgabe());
+                System.out.println("task--- " + aufgb2Eval.get(1).getAufgabe());
+                System.out.println("task--- " + aufgb2Eval.get(2).getAufgabe());
+                System.out.println("task--- " + aufgb2Eval.get(3).getAufgabe());
+                System.out.println("task--- " + aufgb2Eval.get(4).getAufgabe());
 
-            System.out.println("taskTemp = " + TempList.get(0).getAufgabe());
-            System.out.println("taskTemp = " + TempList.get(1).getAufgabe());
-            System.out.println("taskTemp = " + TempList.get(2).getAufgabe());
-            System.out.println("taskTemp = " + TempList.get(3).getAufgabe());
-            System.out.println("taskTemp = " + TempList.get(4).getAufgabe());
+                System.out.println("taskTemp = " + TempList.get(0).getAufgabe());
+                System.out.println("taskTemp = " + TempList.get(1).getAufgabe());
+                System.out.println("taskTemp = " + TempList.get(2).getAufgabe());
+                System.out.println("taskTemp = " + TempList.get(3).getAufgabe());
+                System.out.println("taskTemp = " + TempList.get(4).getAufgabe());
 
-
-            System.out.println("4");
-        } catch (Exception e) {
-            System.out.println("ERROR ???: MainActivity.ChangeOrder --> " + e);
-        } // try
+                System.out.println("4");
+            } catch (Exception e) {
+                System.out.println("ERROR ???: MainActivity.ChangeOrder --> " + e);
+            } // try
+        }
     } // changeOrder
 
     public void exitSystem() {
