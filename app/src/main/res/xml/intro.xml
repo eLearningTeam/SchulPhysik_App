@@ -14,6 +14,7 @@
     <step id="8.2">Time Graph: it is shown in a range bar, where the elapsed time is the lower end and the time for the Task is in the upper side, the elapsed time should remain below the yellow line.</step>
     <step id="8.3">Correctness Graph: it is shown as an bar chart, the score should be above the yellow line.
 To display the different Graphs (Results, Time and Feeling), you have to tap at the statistics.</step>
-    <step id="Impressum:">People involved in the app development: Tobias Kutzner, Christian Steinert, Abdellah Azendour, Carlos Trujillo, Lando Eisenmann, Linda Badinski, Prof. Dr.-Ing. Ingrid Bönninger, Prof. Dr. habil. Olga Wälder, Prof. Dr. Annemarie Jost</step>
+    <step id="9">With the New Button you start from the beginning, the tasks will be randomized so you will get other tasks then before.</step>
+    <step id="Impressum:">People involved in the app development: Tobias Kutzner, Christian Steinert, Abdellah Azendour, Carlos Trujillo, Jacqueline Bothe, Prof. Dr.-Ing. Ingrid Bönninger, Prof. Dr. habil. Olga Wälder, Dr. rer. nat. Bodo Wolf</step>
     <step id=" Kontakt:    "> Tobias.Kutzner@b-tu.de</step>
 </instruction>

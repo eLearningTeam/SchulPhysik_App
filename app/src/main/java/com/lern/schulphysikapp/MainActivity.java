@@ -70,6 +70,9 @@ public class MainActivity extends ActionBarActivity {
     public static boolean xmlMemoryReadAuf = true; // Evita que el archivo que guarda los resultados en memoria sea leído dos veces
     public static boolean xmlMemoryReadPool = true; // Evita que el archivo que guarda los resultados en memoria sea leído dos veces
     private String timeTemp; // Trujillo 06/03/2016
+    private String avgUpCorrectness; // Trujillo 05/07/17
+    private String avgUpFeeling; // Trujillo 13/07/17
+    private String avgUpTime; // Trujillo 13/07/17
 
     public static boolean pool01Completed = false;
     public static boolean pool02Completed = false;
@@ -147,7 +150,6 @@ public class MainActivity extends ActionBarActivity {
         call2parseIntro();
         activateBtnStatistic(); // Verifies if the "Statistic"  and "forward" bottons should be enabled or not
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -304,13 +306,19 @@ public class MainActivity extends ActionBarActivity {
                                 currentAufgabe.setTime(timeTemp); //Trujillo 06_03_2016
                                 vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
                             } else if (currentTag.equalsIgnoreCase(AVGUC)) {
-                                vecAvgUc.add(parser.nextText());
+                                avgUpCorrectness = parser.nextText();
+                                currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
+                                vecAvgUc.add(avgUpCorrectness);
                             } else if (currentTag.equalsIgnoreCase(AVGDC)) {
                             } else if (currentTag.equalsIgnoreCase(AVGUF)) {
-                                vecEmpUf.add(parser.nextText());
+                                avgUpFeeling = parser.nextText();
+                                currentAufgabe.setAvgUpFeeling(avgUpFeeling);
+                                vecEmpUf.add(avgUpFeeling);
                             } else if (currentTag.equalsIgnoreCase(AVGDF)) {
                             } else if (currentTag.equalsIgnoreCase(AVGUT)) {
-                                vecTime4taskUt.add(parser.nextText());
+                                avgUpTime = parser.nextText();
+                                currentAufgabe.setAvgUpTime(avgUpTime);
+                                vecTime4taskUt.add(avgUpTime);
                             } else if (currentTag.equalsIgnoreCase(AVGDT)) {
                             } // if
                         } // if
@@ -348,6 +356,9 @@ public class MainActivity extends ActionBarActivity {
             try {
                 Random randomGen = new Random();
                 ArrayList<Aufgabe> TempList = null;
+                Vector tempVecAvgUc = null;
+                Vector tempVecAvgUf = null;
+                Vector tempVecAvgUt = null;
                 Aufgabe tempAufOrdr = null;
                 int varRandom = 0;
                 int RandomCounter = 0;
@@ -363,6 +374,9 @@ public class MainActivity extends ActionBarActivity {
                 boolean numClass10 = false;
 
                 TempList = new ArrayList<Aufgabe>();
+                tempVecAvgUc = new Vector<String>();
+                tempVecAvgUf = new Vector<String>();
+                tempVecAvgUt = new Vector<String>();
 
                 while(RandomCounter < qntAufTest1) {
                     tempAufOrdr = new Aufgabe();
@@ -374,7 +388,9 @@ public class MainActivity extends ActionBarActivity {
                         case 0:
                             if (!numClass1) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass1 = true;
@@ -382,7 +398,9 @@ public class MainActivity extends ActionBarActivity {
                         case 1:
                             if (!numClass2) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass2 = true;
@@ -390,7 +408,9 @@ public class MainActivity extends ActionBarActivity {
                         case 2:
                             if (!numClass3) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass3 = true;
@@ -398,7 +418,9 @@ public class MainActivity extends ActionBarActivity {
                         case 3:
                             if (!numClass4) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass4 = true;
@@ -406,7 +428,9 @@ public class MainActivity extends ActionBarActivity {
                         case 4:
                             if (!numClass5) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass5 = true;
@@ -414,7 +438,9 @@ public class MainActivity extends ActionBarActivity {
                         case 5:
                             if (!numClass6) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass6 = true;
@@ -422,7 +448,9 @@ public class MainActivity extends ActionBarActivity {
                         case 6:
                             if (!numClass7) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass7 = true;
@@ -430,7 +458,9 @@ public class MainActivity extends ActionBarActivity {
                         case 7:
                             if (!numClass8) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass8 = true;
@@ -438,7 +468,9 @@ public class MainActivity extends ActionBarActivity {
                         case 8:
                             if (!numClass9) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass9 = true;
@@ -446,7 +478,9 @@ public class MainActivity extends ActionBarActivity {
                         case 9:
                             if (!numClass10) {
                                 TempList.add(tempAufOrdr);
-                                System.out.println("random..." + varRandom);
+                                tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                 RandomCounter++;
                             }
                             numClass10 = true;
@@ -454,13 +488,16 @@ public class MainActivity extends ActionBarActivity {
                     } // switch
                 } // while
 
-                System.out.println("1");
                 aufgb2Eval = null;
-                System.out.println("2");
                 aufgb2Eval = TempList;
+                vecAvgUc = null;
+                vecAvgUc = tempVecAvgUc;
+                vecEmpUf = null;
+                vecEmpUf = tempVecAvgUf;
+                vecTime4taskUt = null;
+                vecTime4taskUt = tempVecAvgUt;
 
-                System.out.println("3");
-                for (int tilt=0; tilt < aufgb2Eval.size(); tilt++) {
+                /*for (int tilt=0; tilt < aufgb2Eval.size(); tilt++) {
                     System.out.println("3." + tilt);
                     System.out.println("task-- " + aufgb2Eval.get(tilt).getAufgabe());
                 }
@@ -475,9 +512,7 @@ public class MainActivity extends ActionBarActivity {
                 System.out.println("taskTemp = " + TempList.get(1).getAufgabe());
                 System.out.println("taskTemp = " + TempList.get(2).getAufgabe());
                 System.out.println("taskTemp = " + TempList.get(3).getAufgabe());
-                System.out.println("taskTemp = " + TempList.get(4).getAufgabe());
-
-                System.out.println("4");
+                System.out.println("taskTemp = " + TempList.get(4).getAufgabe());*/
             } catch (Exception e) {
                 System.out.println("ERROR ???: MainActivity.ChangeOrder --> " + e);
             } // try
@@ -792,13 +827,19 @@ public class MainActivity extends ActionBarActivity {
                         currentTag = parser.getName();
 
                        if (currentTag.equalsIgnoreCase(MainActivity.AVGUC)) {
-                           vecAvgUc.add(parser.nextText());
+                           avgUpCorrectness = parser.nextText();
+                           currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
+                           vecAvgUc.add(avgUpCorrectness);
                        } else if (currentTag.equalsIgnoreCase(AVGDC)) {
                        } else if (currentTag.equalsIgnoreCase(AVGUF)) {
-                           vecEmpUf.add(parser.nextText());
+                           avgUpFeeling = parser.nextText();
+                           vecEmpUf.add(avgUpFeeling);
+                           currentAufgabe.setAvgUpFeeling(avgUpFeeling);
                        } else if (currentTag.equalsIgnoreCase(AVGDF)) {
                        } else if (currentTag.equalsIgnoreCase(AVGUT)) {
-                           vecTime4taskUt.add(parser.nextText());
+                           avgUpTime = parser.nextText();
+                           currentAufgabe.setAvgUpTime(avgUpTime);
+                           vecTime4taskUt.add(avgUpTime);
                        } else if (currentTag.equalsIgnoreCase(AVGDT)) {
                        } else if (currentTag.equalsIgnoreCase(TIME)) { //Trujillo 06_03_2016
                         timeTemp = parser.nextText(); //Trujillo 06_03_2016

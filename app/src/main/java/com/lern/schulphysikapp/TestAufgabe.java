@@ -56,6 +56,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
+import java.util.Vector;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.Inflater;
 
@@ -99,6 +100,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
     boolean sumActive;
     String language, AufLanguage;
     private String timeTemp; // Trujillo 06_03_2016
+    private String avgUpCorrectness; // Trujillo 05/07/17
+    private String avgUpFeeling; // Trujillo 13/07/17
+    private String avgUpTime; // Trujillo 13/07/17
 
     // Variables for Zoom
     private static final String TAG = "Touch";
@@ -1512,13 +1516,19 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                 currentAufgabe.setTime(timeTemp); //Trujillo 06_03_2016
                                 MainActivity.vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUC)) {
-                                MainActivity.vecAvgUc.add(parser.nextText());
+                                avgUpCorrectness = parser.nextText();
+                                currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
+                                MainActivity.vecAvgUc.add(avgUpCorrectness);
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDC)) {
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUF)) {
-                                MainActivity.vecEmpUf.add(parser.nextText());
+                                avgUpFeeling = parser.nextText();
+                                currentAufgabe.setAvgUpFeeling(avgUpFeeling);
+                                MainActivity.vecEmpUf.add(avgUpFeeling);
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDF)) {
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUT)) {
-                                MainActivity.vecTime4taskUt.add(parser.nextText());
+                                avgUpTime = parser.nextText();
+                                currentAufgabe.setAvgUpTime(avgUpTime);
+                                MainActivity.vecTime4taskUt.add(avgUpTime);
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDT)) {
                             } // if
                         } // if
@@ -1554,6 +1564,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
         try {
             Random randomGen = new Random();
             ArrayList<Aufgabe> TempList = null;
+            Vector tempVecAvgUc = null;
+            Vector tempVecAvgUf = null;
+            Vector tempVecAvgUt = null;
             Aufgabe tempAufOrdr = null;
             int varRandom = 0;
             int RandomCounter = 0;
@@ -1568,7 +1581,11 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
             boolean numClass8 = false;
             boolean numClass9 = false;
             boolean numClass10 = false;
+
             TempList = new ArrayList<Aufgabe>();
+            tempVecAvgUc = new Vector<String>();
+            tempVecAvgUf = new Vector<String>();
+            tempVecAvgUt = new Vector<String>();
 
             if (testNumbr == 2) {
                 while(RandomCounter < MainActivity.qntAufTest2) {
@@ -1583,7 +1600,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 5:
                                 if (!numClass1) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass1 = true;
@@ -1591,7 +1610,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 6:
                                 if (!numClass2) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass2 = true;
@@ -1599,7 +1620,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 7:
                                 if (!numClass3) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass3 = true;
@@ -1607,7 +1630,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 8:
                                 if (!numClass4) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass4 = true;
@@ -1615,7 +1640,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 9:
                                 if (!numClass5) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass5 = true;
@@ -1623,7 +1650,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 10:
                                 if (!numClass6) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass6 = true;
@@ -1631,7 +1660,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 11:
                                 if (!numClass7) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass7 = true;
@@ -1639,7 +1670,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 12:
                                 if (!numClass8) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass8 = true;
@@ -1647,7 +1680,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 13:
                                 if (!numClass9) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass9 = true;
@@ -1655,7 +1690,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 14:
                                 if (!numClass10) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass10 = true;
@@ -1668,6 +1705,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                 for (int i = 5; i <= MainActivity.qntRandomAufTest2 - 1; i++){
                     // Put the new random values in the list aufgb2Eval
                     MainActivity.aufgb2Eval.set(i, TempList.get(j));
+                    MainActivity.vecAvgUc.set(i, tempVecAvgUc.get(j));
+                    MainActivity.vecEmpUf.set(i, tempVecAvgUf.get(j));
+                    MainActivity.vecTime4taskUt.set(i, tempVecAvgUt.get(j));
                     j++;
                 }
 
@@ -1675,6 +1715,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     // The list Aufgb2Eval has 15 values and we need just 10 (5 from Test 1 and 5 from Test 2)
                     // That is why the last 5 are deleted with this cycle.
                     MainActivity.aufgb2Eval.remove(i);
+                    MainActivity.vecAvgUc.remove(i);
+                    MainActivity.vecEmpUf.remove(i);
+                    MainActivity.vecTime4taskUt.remove(i);
                 }
             } else if(testNumbr == 3) {
                 while(RandomCounter < MainActivity.qntAufTest3) {
@@ -1689,7 +1732,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 10:
                                 if (!numClass1) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass1 = true;
@@ -1697,7 +1742,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 11:
                                 if (!numClass2) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass2 = true;
@@ -1705,7 +1752,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 12:
                                 if (!numClass3) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass3 = true;
@@ -1713,7 +1762,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 13:
                                 if (!numClass4) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass4 = true;
@@ -1721,7 +1772,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 14:
                                 if (!numClass5) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass5 = true;
@@ -1729,7 +1782,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 15:
                                 if (!numClass6) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass6 = true;
@@ -1737,7 +1792,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 16:
                                 if (!numClass7) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass7 = true;
@@ -1745,7 +1802,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 17:
                                 if (!numClass8) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass8 = true;
@@ -1753,7 +1812,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 18:
                                 if (!numClass9) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass9 = true;
@@ -1761,7 +1822,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                             case 19:
                                 if (!numClass10) {
                                     TempList.add(tempAufOrdr);
-                                    System.out.println("random..." + varRandom);
+                                    tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
+                                    tempVecAvgUf.add(tempAufOrdr.getAvgUpFeeling());
+                                    tempVecAvgUt.add(tempAufOrdr.getAvgUpTime());
                                     RandomCounter++;
                                 }
                                 numClass10 = true;
@@ -1774,6 +1837,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                 for (int i = 10; i <= MainActivity.qntRandomAufTest3 + 4; i++){
                     // Put the new random values in the list aufgb2Eval
                     MainActivity.aufgb2Eval.set(i, TempList.get(j));
+                    MainActivity.vecAvgUc.set(i, tempVecAvgUc.get(j));
+                    MainActivity.vecEmpUf.set(i, tempVecAvgUf.get(j));
+                    MainActivity.vecTime4taskUt.set(i, tempVecAvgUt.get(j));
                     j++;
                 }
 
@@ -1781,6 +1847,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     // The list Aufgb2Eval has 23 values and we need just 15 (5 from Test 1, 5 from Test 2 and 5 from Test 3)
                     // That is why the last 9 are deleted with this cycle.
                     MainActivity.aufgb2Eval.remove(i);
+                    MainActivity.vecAvgUc.remove(i);
+                    MainActivity.vecEmpUf.remove(i);
+                    MainActivity.vecTime4taskUt.remove(i);
                 }
             } // if
         } catch (Exception e) {
@@ -1936,6 +2005,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     int zustand = aufTemp.getZustand();
                     int qualifikation = aufTemp.getQualifikation();
                     int empfindung = aufTemp.getEmpfindung();
+                    String valAvgUcorr = aufTemp.getAvgUpCorrectness();
+                    String valAvgUfeel = aufTemp.getAvgUpFeeling();
+                    String valAvgUtime = aufTemp.getAvgUpTime();
 
                     myOutWriter.append("\t<test id=\"" + test + "\">\n");
                     myOutWriter.append("\t\t<aufgabe>" + aufgabe + "</aufgabe>\n");
@@ -1943,6 +2015,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     myOutWriter.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     myOutWriter.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     myOutWriter.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    myOutWriter.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
+                    myOutWriter.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
+                    myOutWriter.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
                     myOutWriter.append("\t</test>\n");
 
                     OSW.append("\t<test id=\"" + test + "\">\n");
@@ -1951,6 +2026,9 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     OSW.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     OSW.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     OSW.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    OSW.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
+                    OSW.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
+                    OSW.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
                     OSW.append("\t</test>\n");
                 }
             } // for

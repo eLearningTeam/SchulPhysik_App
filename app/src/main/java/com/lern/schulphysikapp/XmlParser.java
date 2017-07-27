@@ -32,6 +32,9 @@ public class XmlParser {
     static final String ZUSTANG = "zustang";
     static final String QUALIFIKATION = "qualifikation";
     static final String EMPFINDUNG = "empfindung";
+    static final String AVGUPCORR = "avgupcorr";
+    static final String AVGUPFEEL = "avgupfeel";
+    static final String AVGUPTIME = "avguptime";
 
     // Variable helpOn is to know when reading a help tag
     static boolean helpOn = false;
@@ -638,6 +641,12 @@ public class XmlParser {
             int empAuf = 0;
             String timeAuf;
 
+            String vecEmpUf, vecTimeUt, vecCorrUc;
+
+            MainActivity.vecEmpUf = new Vector<String>();;
+            MainActivity.vecTime4taskUt = new Vector<String>();;
+            MainActivity.vecAvgUc = new Vector<String>();;
+
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 switch (eventType) {
                     case XmlPullParser.START_DOCUMENT:
@@ -657,14 +666,26 @@ public class XmlParser {
                                 //Data for the Statistic
                                 MainActivity.vecTime.add(timeAuf);
                             } else if (currentTag.equalsIgnoreCase(QUALIFIKATION)) {
-                                    int intQual = Integer.parseInt(parser.nextText());
-                                    //Data for the Statistic
-                                    MainActivity.vecQualifikation.add(intQual);
+                                int intQual = Integer.parseInt(parser.nextText());
+                                //Data for the Statistic
+                                MainActivity.vecQualifikation.add(intQual);
                             } else if (currentTag.equalsIgnoreCase(EMPFINDUNG)) {
                                 empAuf = Integer.parseInt(parser.nextText());
                                 //Data for the Statistic
                                 MainActivity.vecEmpfindung.add(empAuf);
-                            } // if
+                            } else if (currentTag.equalsIgnoreCase(AVGUPCORR)) {
+                                 vecCorrUc = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecAvgUc.add(vecCorrUc);
+                            } else if (currentTag.equalsIgnoreCase(AVGUPFEEL)) {
+                                 vecEmpUf = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecEmpUf.add(vecEmpUf);
+                            } else if (currentTag.equalsIgnoreCase(AVGUPTIME)) {
+                                 vecTimeUt = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecTime4taskUt.add(vecTimeUt);
+                            }// if
                         } // if
                         break;
 

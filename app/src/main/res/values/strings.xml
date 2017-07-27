@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Schul Physic App</string>
+    <string name="app_name">School Physics App</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -9,7 +9,7 @@
 
     <string name="Weiter">Next</string>
     <string name="hello"> Description of the program</string>
-    <string name="title_activity_test_aufgabe">Schul Physic App</string>
+    <string name="title_activity_test_aufgabe">School Physics App</string>
     <string name="chk_ios">OK</string>
     <string name="title_activity_statistic">Statistic</string>
     <string name="button_next_task">Next</string>
@@ -28,6 +28,7 @@
     <string name="Anleitung6">Compere withe the solution given</string>
     <string name="Anleitung7">Now the user has to select how many percent of the task where right</string>
     <string name="Anleitung8">At the end you can see your statistic</string>
+    <string name="Anleitung9">With the New Button you start from the beginning, the tasks will be randomized so you will get other tasks then before.</string>
     <string name="Anleitung">sd</string>
 
     <string name="Einschätzung">My personal opinion I felt:</string>

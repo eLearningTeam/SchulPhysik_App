@@ -14,13 +14,16 @@ public class Aufgabe {
 	private int zustand = 0;
 	private int qualifikation;
 	private int empfindung;
-
+	private String avgUpCorrectness; // Trujillo 05/07/17
+	private String avgUpFeeling; // Trujillo 13/07/17
+	private String avgUpTime; // Trujillo 13/07/17
 
 	public Aufgabe() {
 	// Constructor without parameters	
 	}
 
-	public Aufgabe(int test, int aufgabe, String imageAufgabe, String hilfe, String iconLoesung, String Text, String time, String timeRequired, int zustand, int qlfktn, int empfng) {
+	public Aufgabe(int test, int aufgabe, String imageAufgabe, String hilfe, String iconLoesung, String Text, String time,
+				   String timeRequired, int zustand, int qlfktn, int empfng, String avgCorr, String avgFeel, String avgTime) {
 		// Constructor with parameters
 		
 		super();
@@ -35,6 +38,9 @@ public class Aufgabe {
 		this.qualifikation = qlfktn;
 		this.test = test;
 		this.empfindung = empfng;
+		this.avgUpCorrectness = avgCorr;
+		this.avgUpFeeling = avgFeel;
+		this.avgUpTime = avgTime;
 	}
 	
 	//Getters
@@ -81,7 +87,13 @@ public class Aufgabe {
 	public int getTest(){
 		return test;
 	}
-	
+
+	public String getAvgUpCorrectness() { return avgUpCorrectness; }
+
+	public String getAvgUpFeeling() { return avgUpFeeling; }
+
+	public String getAvgUpTime() { return avgUpTime; }
+
 	//Setters
 	public void setImageAufgabe(String imageAufgabe) {
 		String temp = imageAufgabe.replaceAll(" ", "");;
@@ -129,4 +141,10 @@ public class Aufgabe {
 	public void setTest(int tst) {
 		this.test = tst;
 	}
+
+	public void setAvgUpCorrectness(String corr) { this.avgUpCorrectness = corr; }
+
+	public void setAvgUpFeeling(String feel) { this.avgUpFeeling = feel; }
+
+	public void setAvgUpTime(String time) { this.avgUpTime = time; }
 }

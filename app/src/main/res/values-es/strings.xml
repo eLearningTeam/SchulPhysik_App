@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Schul Physic App</string>
+    <string name="app_name">Schul Physik App</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -10,7 +10,7 @@
 
     <string name="Weiter">Siguiente</string>
     <string name="hello"> Descripción del programa</string>
-    <string name="title_activity_test_aufgabe">Schul Physic App</string>
+    <string name="title_activity_test_aufgabe">Schul Physik App</string>
     <string name="chk_ios">OK</string>
     <string name="title_activity_statistic">Estadística</string>
     <string name="button_next_task">Siguiente</string>
@@ -29,6 +29,7 @@
     <string name="Anleitung6">Comparar con la solución dada</string>
     <string name="Anleitung7">Ahora el usuario deberá seleccionar su porcentaje de precisión</string>
     <string name="Anleitung8">Al final usted podrá ver sus estadisticas</string>
+    <string name="Anleitung9">Con el boton "nuevo", empezará desde el principio y se mostrarán nuevas tareas, elegidas de manera aleatoria.</string>
     <string name="Anleitung">sd</string>
 
     <string name="Einschätzung">Evaluación personal:</string>
