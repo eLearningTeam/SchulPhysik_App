@@ -639,7 +639,7 @@ public class XmlParser {
             int testNumTemp;
             int aufNum = 0;
             int empAuf = 0;
-            String timeAuf;
+            String timeAuf, timeReqAuf;
 
             String vecEmpUf, vecTimeUt, vecCorrUc;
 
@@ -662,9 +662,9 @@ public class XmlParser {
                                 // Data to create the statistic Graph
                                 MainActivity.vecTest.add("Test " + testNum);
                             } else if (currentTag.equalsIgnoreCase(TIMEREQUIRED)) {
-                                timeAuf = parser.nextText();
+                                timeReqAuf = parser.nextText();
                                 //Data for the Statistic
-                                MainActivity.vecTime.add(timeAuf);
+                                MainActivity.vecTime.add(timeReqAuf);
                             } else if (currentTag.equalsIgnoreCase(QUALIFIKATION)) {
                                 int intQual = Integer.parseInt(parser.nextText());
                                 //Data for the Statistic
@@ -673,7 +673,11 @@ public class XmlParser {
                                 empAuf = Integer.parseInt(parser.nextText());
                                 //Data for the Statistic
                                 MainActivity.vecEmpfindung.add(empAuf);
-                            } else if (currentTag.equalsIgnoreCase(AVGUPCORR)) {
+                            } else if (currentTag.equalsIgnoreCase(TIME)) {
+                                timeAuf = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecTimeTask.add(timeAuf);
+                            }else if (currentTag.equalsIgnoreCase(AVGUPCORR)) {
                                  vecCorrUc = parser.nextText();
                                 //Data for the Statistic
                                 MainActivity.vecAvgUc.add(vecCorrUc);
@@ -713,7 +717,8 @@ public class XmlParser {
             int testNum = 0;
             int poolNum = 0;
             int empAuf = 0;
-            String timeAuf;
+            String timeAuf, timeReqAuf;
+            String vecEmpUf, vecTimeUt, vecCorrUc;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 switch (eventType) {
@@ -729,9 +734,9 @@ public class XmlParser {
                                 poolNum = Integer.parseInt(parser.nextText());
                                 MainActivity.vecTest.add("Pool " + testNum);
                             } else if (currentTag.equalsIgnoreCase(TIMEREQUIRED)) {
-                                timeAuf = parser.nextText();
+                                timeReqAuf = parser.nextText();
                                 //Data for the Statistic
-                                MainActivity.vecTime.add(timeAuf);
+                                MainActivity.vecTime.add(timeReqAuf);
                             } else if (currentTag.equalsIgnoreCase(QUALIFIKATION)) {
                                 int intQual = Integer.parseInt(parser.nextText());
                                 //Data for the Statistic
@@ -740,7 +745,23 @@ public class XmlParser {
                                 empAuf = Integer.parseInt(parser.nextText());
                                 //Data for the Statistic
                                 MainActivity.vecEmpfindung.add(empAuf);
-                            } // if
+                            } else if (currentTag.equalsIgnoreCase(TIME)) {
+                                timeAuf = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecTimeTask.add(timeAuf);
+                            } else if (currentTag.equalsIgnoreCase(AVGUPCORR)) {
+                                vecCorrUc = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecAvgUc.add(vecCorrUc);
+                            } else if (currentTag.equalsIgnoreCase(AVGUPFEEL)) {
+                                vecEmpUf = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecEmpUf.add(vecEmpUf);
+                            } else if (currentTag.equalsIgnoreCase(AVGUPTIME)) {
+                                vecTimeUt = parser.nextText();
+                                //Data for the Statistic
+                                MainActivity.vecTime4taskUt.add(vecTimeUt);
+                            }// if
                         } // if
                         break;
 

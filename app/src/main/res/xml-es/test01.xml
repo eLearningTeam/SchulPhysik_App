@@ -3,73 +3,78 @@
 <test id="1" lang="deutsch">
     <aufgaben>
         <aufgabe id="1">
-            <text></text>
-            <bild></bild>
+            <text>Tarea 1</text>
+            <bild>test01aufgabe01</bild>
             <hilfe>
+                <value>https://www.b-tu.de/</value>
             </hilfe>
-            <loesung></loesung>
-            <time></time>
-            <avguc></avguc>
+            <loesung>test01loesung01</loesung>
+            <time>1</time>
+            <avguc>10</avguc>
             <avgdc></avgdc>
-            <avguf></avguf>
+            <avguf>-2</avguf>
             <avgdf></avgdf>
-            <avgut></avgut>
+            <avgut>0.1</avgut>
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="2">
-            <text></text>
-            <bild></bild>
+            <text>Tarea 2</text>
+            <bild>test01aufgabe02</bild>
             <hilfe>
+                <value>https://www.b-tu.de/</value>
             </hilfe>
-            <loesung></loesung>
-            <time></time>
-            <avguc></avguc>
+            <loesung>test01loesung02</loesung>
+            <time>1</time>
+            <avguc>20</avguc>
             <avgdc></avgdc>
-            <avguf></avguf>
+            <avguf>-1</avguf>
             <avgdf></avgdf>
-            <avgut></avgut>
+            <avgut>0.2</avgut>
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="3">
-            <text></text>
-            <bild></bild>
+            <text>Tarea 3</text>
+            <bild>test01aufgabe03</bild>
             <hilfe>
+                <value>https://www.b-tu.de/</value>
             </hilfe>
-            <loesung></loesung>
-            <time></time>
-            <avguc></avguc>
+            <loesung>test01loesung03</loesung>
+            <time>1</time>
+            <avguc>30</avguc>
             <avgdc></avgdc>
-            <avguf></avguf>
+            <avguf>0</avguf>
             <avgdf></avgdf>
-            <avgut></avgut>
+            <avgut>0.3</avgut>
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="4">
-            <text></text>
-            <bild></bild>
+            <text>Tarea 4</text>
+            <bild>test01aufgabe04</bild>
             <hilfe>
+                <value>https://www.b-tu.de/</value>
             </hilfe>
-            <loesung></loesung>
-            <time></time>
-            <avguc></avguc>
+            <loesung>test01loesung04</loesung>
+            <time>1</time>
+            <avguc>40</avguc>
             <avgdc></avgdc>
-            <avguf></avguf>
+            <avguf>1</avguf>
             <avgdf></avgdf>
-            <avgut></avgut>
+            <avgut>0.4</avgut>
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="5">
-            <text></text>
-            <bild></bild>
+            <text>Tarea 5</text>
+            <bild>test01aufgabe05</bild>
             <hilfe>
+                <value>https://www.b-tu.de/</value>
             </hilfe>
-            <loesung></loesung>
-            <time></time>
-            <avguc></avguc>
+            <loesung>test01loesung05</loesung>
+            <time>1</time>
+            <avguc>50</avguc>
             <avgdc></avgdc>
-            <avguf></avguf>
+            <avguf>2</avguf>
             <avgdf></avgdf>
-            <avgut></avgut>
+            <avgut>0.5</avgut>
             <avgdt></avgdt>
         </aufgabe>
     </aufgaben>

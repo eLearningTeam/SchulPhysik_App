@@ -3,13 +3,12 @@
 <test id="1" lang="deutsch">
 	<aufgaben>
 		<aufgabe id="1">
-			<text>Pool01</text>
+			<text>Task 01</text>
 			<bild>pool01aufgabe01</bild>
 			<hilfe>
                 <value>https://www.b-tu.de/</value>
 			</hilfe>
 			<loesung>pool01loesung01</loesung>
-            <time></time>
             <time>1</time>
             <avguc>100</avguc>
             <avgdc></avgdc>
@@ -19,13 +18,12 @@
             <avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="2">
-            <text>Pool02</text>
+            <text>Task 02</text>
             <bild>pool01aufgabe02</bild>
             <hilfe>
                 <value>https://www.b-tu.de/</value>
             </hilfe>
             <loesung>pool01loesung02</loesung>
-            <time></time>
             <time>1</time>
             <avguc>100</avguc>
             <avgdc></avgdc>
@@ -35,13 +33,12 @@
             <avgdt></avgdt>
 		</aufgabe>
         <aufgabe id="3">
-            <text>Pool03</text>
+            <text>Task 03</text>
             <bild>pool01aufgabe03</bild>
             <hilfe>
                 <value>https://www.b-tu.de/</value>
             </hilfe>
             <loesung>pool01loesung03</loesung>
-            <time></time>
             <time>1</time>
             <avguc>100</avguc>
             <avgdc></avgdc>
@@ -51,13 +48,12 @@
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="4">
-            <text>Pool04</text>
+            <text>Task 04</text>
             <bild>pool01aufgabe04</bild>
             <hilfe>
                 <value>https://www.b-tu.de/</value>
             </hilfe>
             <loesung>pool01loesung04</loesung>
-            <time></time>
             <time>1</time>
             <avguc>100</avguc>
             <avgdc></avgdc>
@@ -67,13 +63,12 @@
             <avgdt></avgdt>
         </aufgabe>
         <aufgabe id="5">
-            <text>Pool05</text>
+            <text>Task 05</text>
             <bild>pool01aufgabe05</bild>
             <hilfe>
                 <value>https://www.b-tu.de/</value>
             </hilfe>
             <loesung>pool01loesung05</loesung>
-            <time></time>
             <time>1</time>
             <avguc>100</avguc>
             <avgdc></avgdc>

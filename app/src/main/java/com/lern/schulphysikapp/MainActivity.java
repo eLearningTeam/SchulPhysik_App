@@ -86,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
     static final String LOESUNG = "loesung";
     static final String TEXT = "text";
     static final String TIME = "time";
+    static final String TIMEREQUIRED = "timerequired";
 
     //for the statistik Lando Eisenmann!!!
     static final String AVGUC = "avguc";//avarage upper correctness
@@ -118,9 +119,9 @@ public class MainActivity extends ActionBarActivity {
     public static int qntAufTest2 = 5;
     public static int qntAufTest3 = 5;
     // When Test result > qntPoolAufgaben --> 2 Aufgaben from the Pool
-    public static int qntRandomAufTest1 = 10;
-    public static int qntRandomAufTest2 = 10;
-    public static int qntRandomAufTest3 = 10;
+    public static int qntRandomAufTest1 = 5;
+    public static int qntRandomAufTest2 = 5;
+    public static int qntRandomAufTest3 = 5;
 
     Button btnStatistic, btnWeiter, btnNew;;
 
@@ -340,7 +341,7 @@ public class MainActivity extends ActionBarActivity {
                 eventType = parser.next();
             } // while
 
-            changeOrder();
+            //changeOrder();
         } catch (Exception e) {
             System.out.println("ERROR ???: MainActivity.java parse --> " + e);
         } // try
@@ -367,11 +368,11 @@ public class MainActivity extends ActionBarActivity {
                 boolean numClass3 = false;
                 boolean numClass4 = false;
                 boolean numClass5 = false;
-                boolean numClass6 = false;
-                boolean numClass7 = false;
-                boolean numClass8 = false;
-                boolean numClass9 = false;
-                boolean numClass10 = false;
+                //boolean numClass6 = false;
+                //boolean numClass7 = false;
+                //boolean numClass8 = false;
+                //boolean numClass9 = false;
+                //boolean numClass10 = false;
 
                 TempList = new ArrayList<Aufgabe>();
                 tempVecAvgUc = new Vector<String>();
@@ -435,7 +436,7 @@ public class MainActivity extends ActionBarActivity {
                             }
                             numClass5 = true;
                             break;
-                        case 5:
+                        /*case 5:
                             if (!numClass6) {
                                 TempList.add(tempAufOrdr);
                                 tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
@@ -484,7 +485,7 @@ public class MainActivity extends ActionBarActivity {
                                 RandomCounter++;
                             }
                             numClass10 = true;
-                            break;
+                            break;*/
                     } // switch
                 } // while
 
@@ -828,22 +829,22 @@ public class MainActivity extends ActionBarActivity {
 
                        if (currentTag.equalsIgnoreCase(MainActivity.AVGUC)) {
                            avgUpCorrectness = parser.nextText();
-                           currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
+                           //currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
                            vecAvgUc.add(avgUpCorrectness);
                        } else if (currentTag.equalsIgnoreCase(AVGDC)) {
                        } else if (currentTag.equalsIgnoreCase(AVGUF)) {
                            avgUpFeeling = parser.nextText();
                            vecEmpUf.add(avgUpFeeling);
-                           currentAufgabe.setAvgUpFeeling(avgUpFeeling);
+                           //currentAufgabe.setAvgUpFeeling(avgUpFeeling);
                        } else if (currentTag.equalsIgnoreCase(AVGDF)) {
                        } else if (currentTag.equalsIgnoreCase(AVGUT)) {
                            avgUpTime = parser.nextText();
-                           currentAufgabe.setAvgUpTime(avgUpTime);
+                           //currentAufgabe.setAvgUpTime(avgUpTime);
                            vecTime4taskUt.add(avgUpTime);
                        } else if (currentTag.equalsIgnoreCase(AVGDT)) {
                        } else if (currentTag.equalsIgnoreCase(TIME)) { //Trujillo 06_03_2016
-                        timeTemp = parser.nextText(); //Trujillo 06_03_2016
-                        vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
+                           timeTemp = parser.nextText(); //Trujillo 06_03_2016
+                           vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
                        } // if
 
                         break;
@@ -878,10 +879,14 @@ public class MainActivity extends ActionBarActivity {
                             vecAvgUc.add(parser.nextText());
                         } else if (currentTag.equalsIgnoreCase(AVGDC)) {
                         } else if (currentTag.equalsIgnoreCase(AVGUF)) {
-                            vecEmpUf.add(parser.nextText());
+                            avgUpFeeling = parser.nextText();
+                            vecEmpUf.add(avgUpFeeling);
+                            //currentAufgabe.setAvgUpFeeling(avgUpFeeling);
                         } else if (currentTag.equalsIgnoreCase(AVGDF)) {
                         } else if (currentTag.equalsIgnoreCase(AVGUT)) {
-                            vecTime4taskUt.add(parser.nextText());
+                            avgUpTime = parser.nextText();
+                            //currentAufgabe.setAvgUpTime(avgUpTime);
+                            vecTime4taskUt.add(avgUpTime);
                         } else if (currentTag.equalsIgnoreCase(AVGDT)) {
                         } else if (currentTag.equalsIgnoreCase(TIME)) { //Trujillo 06_03_2016
                             timeTemp = parser.nextText(); //Trujillo 06_03_2016

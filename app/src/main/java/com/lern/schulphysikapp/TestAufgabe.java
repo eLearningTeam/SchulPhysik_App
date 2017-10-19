@@ -103,6 +103,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
     private String avgUpCorrectness; // Trujillo 05/07/17
     private String avgUpFeeling; // Trujillo 13/07/17
     private String avgUpTime; // Trujillo 13/07/17
+    private String timeReqTemp; // Trujillo 10/08/2017
 
     // Variables for Zoom
     private static final String TAG = "Touch";
@@ -1515,6 +1516,10 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                 timeTemp = parser.nextText(); //Trujillo 06_03_2016
                                 currentAufgabe.setTime(timeTemp); //Trujillo 06_03_2016
                                 MainActivity.vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
+                            } else if (currentTag.equalsIgnoreCase(MainActivity.TIMEREQUIRED)) {
+                                timeReqTemp = parser.nextText(); //Trujillo 06_03_2016
+                                currentAufgabe.setTimeRequired(timeReqTemp); //Trujillo 06_03_2016
+                                MainActivity.vecTime.add(timeReqTemp); //Trujillo 06_03_2016
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUC)) {
                                 avgUpCorrectness = parser.nextText();
                                 currentAufgabe.setAvgUpCorrectness(avgUpCorrectness);
@@ -1550,7 +1555,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                 eventType = parser.next();
             } // while
 
-            changeOrder(testNumbr);
+            //changeOrder(testNumbr);
         } catch (Exception e) {
             System.out.println("ERROR ???: TestAufgabe.java parseNext --> " + e);
         } // try
@@ -1576,11 +1581,11 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
             boolean numClass3 = false;
             boolean numClass4 = false;
             boolean numClass5 = false;
-            boolean numClass6 = false;
+           /* boolean numClass6 = false;
             boolean numClass7 = false;
             boolean numClass8 = false;
             boolean numClass9 = false;
-            boolean numClass10 = false;
+            boolean numClass10 = false;*/
 
             TempList = new ArrayList<Aufgabe>();
             tempVecAvgUc = new Vector<String>();
@@ -1647,7 +1652,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                 }
                                 numClass5 = true;
                                 break;
-                            case 10:
+                            /*case 10:
                                 if (!numClass6) {
                                     TempList.add(tempAufOrdr);
                                     tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
@@ -1696,7 +1701,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                     RandomCounter++;
                                 }
                                 numClass10 = true;
-                                break;
+                                break;*/
                         } // switch
                     } // if
                 } // while
@@ -1779,7 +1784,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                 }
                                 numClass5 = true;
                                 break;
-                            case 15:
+                            /*case 15:
                                 if (!numClass6) {
                                     TempList.add(tempAufOrdr);
                                     tempVecAvgUc.add(tempAufOrdr.getAvgUpCorrectness());
@@ -1828,7 +1833,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                     RandomCounter++;
                                 }
                                 numClass10 = true;
-                                break;
+                                break;*/
                         } // switch
                     } // if
                 } // while
@@ -1923,14 +1928,24 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                                 timeTemp = parser.nextText(); //Trujillo 06_03_2016
                                 currentPoolAfgb.setTime(timeTemp); //Trujillo 06_03_2016
                                 MainActivity.vecTimeTask.add(timeTemp); //Trujillo 06_03_2016
+                            } else if (currentTag.equalsIgnoreCase(MainActivity.TIMEREQUIRED)) {
+                                timeReqTemp = parser.nextText(); //Trujillo 06_03_2016
+                                currentAufgabe.setTimeRequired(timeReqTemp); //Trujillo 06_03_2016
+                                MainActivity.vecTime.add(timeReqTemp); //Trujillo 06_03_2016
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUC)) {
-                                MainActivity.vecAvgUc.add(parser.nextText());
+                                avgUpCorrectness = parser.nextText();
+                                currentPoolAfgb.setAvgUpCorrectness(avgUpCorrectness);
+                                MainActivity.vecAvgUc.add(avgUpCorrectness); // Trujillo 10/08/2017
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDC)) {
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUF)) {
-                                MainActivity.vecEmpUf.add(parser.nextText());
+                                avgUpFeeling = parser.nextText();
+                                currentPoolAfgb.setAvgUpFeeling(avgUpFeeling);
+                                MainActivity.vecEmpUf.add(avgUpFeeling); // Trujillo 10/08/2017
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDF)) {
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGUT)) {
-                                MainActivity.vecTime4taskUt.add(parser.nextText());
+                                avgUpTime = parser.nextText();
+                                currentPoolAfgb.setAvgUpTime(avgUpTime);
+                                MainActivity.vecTime4taskUt.add(avgUpTime); // Trujillo 10/08/2017
                             } else if (currentTag.equalsIgnoreCase(MainActivity.AVGDT)) {
                                 //MainActivity.         .add(parser.nextText());
                             } // if
@@ -2008,6 +2023,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     String valAvgUcorr = aufTemp.getAvgUpCorrectness();
                     String valAvgUfeel = aufTemp.getAvgUpFeeling();
                     String valAvgUtime = aufTemp.getAvgUpTime();
+                    String time = aufTemp.getTime();
 
                     myOutWriter.append("\t<test id=\"" + test + "\">\n");
                     myOutWriter.append("\t\t<aufgabe>" + aufgabe + "</aufgabe>\n");
@@ -2015,6 +2031,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     myOutWriter.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     myOutWriter.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     myOutWriter.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    myOutWriter.append("\t\t<time>" + time + "</time>\n");
                     myOutWriter.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
                     myOutWriter.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
                     myOutWriter.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
@@ -2026,6 +2043,7 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     OSW.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     OSW.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     OSW.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    OSW.append("\t\t<time>" + time + "</time>\n");
                     OSW.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
                     OSW.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
                     OSW.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
@@ -2081,6 +2099,10 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     int zustand = poolTemp.getZustand();
                     int qualifikation = poolTemp.getQualifikation();
                     int empfindung = poolTemp.getEmpfindung();
+                    String valAvgUcorr = poolTemp.getAvgUpCorrectness();
+                    String valAvgUfeel = poolTemp.getAvgUpFeeling();
+                    String valAvgUtime = poolTemp.getAvgUpTime();
+                    String time = poolTemp.getTime();
 
                     myOutWriter.append("\t<test id=\"" + test + "\">\n");
                     myOutWriter.append("\t\t<aufgabe>" + aufgabe + "</aufgabe>\n");
@@ -2088,6 +2110,10 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     myOutWriter.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     myOutWriter.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     myOutWriter.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    myOutWriter.append("\t\t<time>" + time + "</time>\n");
+                    myOutWriter.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
+                    myOutWriter.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
+                    myOutWriter.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
                     myOutWriter.append("\t</test>\n");
 
                     OSW.append("\t<test id=\"" + test + "\">\n"); // trujillo 07_03_2016
@@ -2096,6 +2122,10 @@ public class TestAufgabe extends ActionBarActivity implements OnTouchListener {
                     OSW.append("\t\t<zustang>" + zustand + "</zustang>\n");
                     OSW.append("\t\t<qualifikation>" + qualifikation + "</qualifikation>\n");
                     OSW.append("\t\t<empfindung>" + empfindung + "</empfindung>\n");
+                    OSW.append("\t\t<time>" + time + "</time>\n");
+                    OSW.append("\t\t<avgupcorr>" + valAvgUcorr + "</avgupcorr>\n");
+                    OSW.append("\t\t<avgupfeel>" + valAvgUfeel + "</avgupfeel>\n");
+                    OSW.append("\t\t<avguptime>" + valAvgUtime + "</avguptime>\n");
                     OSW.append("\t</test>\n");
                 }
             } // for

@@ -8,8 +8,8 @@ android {
         applicationId "com.lern.schulphysikapp"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 3 // This number should increase every time the APK is created
-        versionName "1.2"  // The name for the user
+        versionCode 1 // This number should increase every time the APK is created  4
+        versionName "1.0"  // The name for the user 1,21
     }
     buildTypes {
         release {

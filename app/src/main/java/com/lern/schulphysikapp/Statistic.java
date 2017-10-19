@@ -355,73 +355,75 @@ public class Statistic extends ActionBarActivity implements OnTouchListener {
     public void nextGraph(View view){
         System.out.println("--> nextGraph");
         /* Measures the quantitiy of tasks that the next Test has */
-        nextAufgabe = MainActivity.vecTest.get(indx_graph).toString();
-        sizeY = evalQtest(nextAufgabe);
+        try {
+            nextAufgabe = MainActivity.vecTest.get(indx_graph).toString();
+            sizeY = evalQtest(nextAufgabe);
         /* array to control which test is beeing displayed */
-        indx_sTests++;
-        sTests[indx_sTests] = nextAufgabe;
+            indx_sTests++;
+            sTests[indx_sTests] = nextAufgabe;
 
-        int[] y_Qfwd_max = new int[sizeY];
-        int[] y_Qfwd_min = new int[sizeY];
-        int h = 0;
-        int[] x_Efwd = new int[sizeY];
-        int[] y_Efwd = new int[sizeY];
-        int h2 = 0;
+            int[] y_Qfwd_max = new int[sizeY];
+            int[] y_Qfwd_min = new int[sizeY];
+            int h = 0;
+            int[] x_Efwd = new int[sizeY];
+            int[] y_Efwd = new int[sizeY];
+            int h2 = 0;
 
-        int i2 = indx_graph;
-        time_temp = new String[10];
+            int i2 = indx_graph;
+            time_temp = new String[10];
+            indx_graph_Avg = indx_graph;
 
-        while (h < sizeY) {
-            j = MainActivity.vecQualifikation.get(indx_graph).toString();
-            //time_temp[h] = MainActivity.vecTime.get(indx_graph).toString();
-            y_Qfwd_max[h] = Integer.parseInt(j);
-            //y_Qfwd_min[h] = h+1;
-            y_Qfwd_min[h] = 0;
+            while (h < sizeY) {
+                j = MainActivity.vecQualifikation.get(indx_graph).toString();
+                //time_temp[h] = MainActivity.vecTime.get(indx_graph).toString();
+                y_Qfwd_max[h] = Integer.parseInt(j);
+                //y_Qfwd_min[h] = h+1;
+                y_Qfwd_min[h] = 0;
 
-            indx_graph++;
-            h++;
-        } // while
+                indx_graph++;
+                h++;
+            } // while
 
-        while (h2 < sizeY) {
-            //j = MainActivity.vecEmpfindung.get(i2).toString();
-            //_/_/_/j = MainActivity.vecAvgUc.get(i2).toString();
-            j = MainActivity.vecAvgUc.get(indx_graph_Avg).toString();
-            y_Efwd[h2] = Integer.parseInt(j);
-            x_Efwd[h2] = i2+1;
+            while (h2 < sizeY) {
+                //j = MainActivity.vecEmpfindung.get(i2).toString();
+                //_/_/_/j = MainActivity.vecAvgUc.get(i2).toString();
+                j = MainActivity.vecAvgUc.get(indx_graph_Avg).toString();
+                y_Efwd[h2] = Integer.parseInt(j);
+                x_Efwd[h2] = i2+1;
 
-            i2++;
-            h2++;
-            indx_graph_Avg++;
-        } // while
+                i2++;
+                h2++;
+                indx_graph_Avg++;
+            } // while
 
-        if (MainActivity.vecQualifikation.size() == indx_graph) {
-            btnFwd.setEnabled(false);
-        }
-        if (indx_graph > 0) btnRew.setEnabled(true);
+            if (MainActivity.vecQualifikation.size() == indx_graph) {
+                btnFwd.setEnabled(false);
+            }
+            if (indx_graph > 0) btnRew.setEnabled(true);
 
-        series_Q.clear();
-        series_E.clear();
+            series_Q.clear();
+            series_E.clear();
 
-        //_/_/TimeSeries series = new TimeSeries("Line1");
-        //series = new CategorySeries("Tests");
-        for (int w = 0; w < y_Qfwd_max.length; w++) {
-            y_temp_Q_max = (double) y_Qfwd_max[w];
-            y_temp_Q_min = (double) y_Qfwd_min[w];
-            series_Q.add(y_temp_Q_min, y_temp_Q_max);
-        }
+            //_/_/TimeSeries series = new TimeSeries("Line1");
+            //series = new CategorySeries("Tests");
+            for (int w = 0; w < y_Qfwd_max.length; w++) {
+                y_temp_Q_max = (double) y_Qfwd_max[w];
+                y_temp_Q_min = (double) y_Qfwd_min[w];
+                series_Q.add(y_temp_Q_min, y_temp_Q_max);
+            }
 
-        for (int w = 0; w < x_Efwd.length; w++) {
-            x_temp_E = (double) x_Efwd[w];
-            y_temp_E = (double) y_Efwd[w];
-            series_E.add("line" + x_temp_E, y_temp_E);
-        }
+            for (int w = 0; w < x_Efwd.length; w++) {
+                x_temp_E = (double) x_Efwd[w];
+                y_temp_E = (double) y_Efwd[w];
+                series_E.add("line" + x_temp_E, y_temp_E);
+            }
 
-        dataset.clear();
-        dataset.addSeries(series_Q.toXYSeries());
-        dataset.addSeries(series_E.toXYSeries());
-        mRenderer.setXTitle("                                        " + getString(R.string.Aufgabe));
+            dataset.clear();
+            dataset.addSeries(series_Q.toXYSeries());
+            dataset.addSeries(series_E.toXYSeries());
+            mRenderer.setXTitle("                                        " + getString(R.string.Aufgabe));
 
-        // Set the name or the graph at the top of it
+            // Set the name or the graph at the top of it
        /* switch (language) {
             case "en":
                 mRenderer.setChartTitle("Results for " + nextAufgabe);
@@ -430,28 +432,31 @@ public class Statistic extends ActionBarActivity implements OnTouchListener {
                 mRenderer.setChartTitle("Ergebniss fÃ¼r " + nextAufgabe);
                 break;
         }*/
-        mRenderer.setChartTitle(getString(R.string.chartTitle) + " " + nextAufgabe);
+            mRenderer.setChartTitle(getString(R.string.chartTitle) + " " + nextAufgabe);
 
-        if (nextAufgabe.toLowerCase().contains("pool")) {
-            mRenderer.setXAxisMax(3.5);
-        } else {
-            mRenderer.setXAxisMax(5.5);
-        }
-
-        timeGraph_boolean = true;
-        ResultGraph_boolean = false;
-        feelingGraph_boolean = false;
-
-        gView.repaint();
-
-        if (sizeY < 5) { //When it enters the pool it just has 2 or 3 exercises, that is why the indx_graph_Avg should be added as it were 5 exercises performed.
-            if (sizeY == 4) {
-                indx_graph_Avg = indx_graph_Avg + 1;
-            } else if (sizeY == 3) {
-                indx_graph_Avg = indx_graph_Avg + 2;
-            } else if (sizeY == 2) {
-                indx_graph_Avg = indx_graph_Avg + 3;
+            if (nextAufgabe.toLowerCase().contains("pool")) {
+                mRenderer.setXAxisMax(3.5);
+            } else {
+                mRenderer.setXAxisMax(5.5);
             }
+
+            timeGraph_boolean = true;
+            ResultGraph_boolean = false;
+            feelingGraph_boolean = false;
+
+            gView.repaint();
+
+            if (sizeY < 5) { //When it enters the pool it just has 2 or 3 exercises, that is why the indx_graph_Avg should be added as it were 5 exercises performed.
+                if (sizeY == 4) {
+                    indx_graph_Avg = indx_graph_Avg + 1;
+                } else if (sizeY == 3) {
+                    indx_graph_Avg = indx_graph_Avg + 2;
+                } else if (sizeY == 2) {
+                    indx_graph_Avg = indx_graph_Avg + 3;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error: TestAufgabe.nextgraph " + e);
         }
     } //nextGraph
 
@@ -669,7 +674,13 @@ public class Statistic extends ActionBarActivity implements OnTouchListener {
                 //minutes = Integer.parseInt(j.substring(0,posMin));
                 sSeconds = j.substring(j.lastIndexOf(":") + 1);
                 seconds = ((Integer.parseInt(sSeconds))*100)/60;
-                y_Time_Temp = Double.parseDouble(sMinutes + "." + seconds); // Trujillo 06_03_2016
+
+                if (seconds < 10) {
+                    y_Time_Temp = Double.parseDouble(sMinutes + ".0" + seconds); // Trujillo 30_08_2017
+                } else {
+                    y_Time_Temp = Double.parseDouble(sMinutes + "." + seconds); // Trujillo 06_03_2016
+                }
+
                 if (y_Time_Temp > j_temp){
                     y_Time_Temp = j_temp - 0.01;
                 }
@@ -686,7 +697,6 @@ public class Statistic extends ActionBarActivity implements OnTouchListener {
                 //_/_/_/j = MainActivity.vecTime4taskUt.get(i2).toString();
                 j = MainActivity.vecTime4taskUt.get(indx_temp_Avg).toString();
                 j_temp = Float.parseFloat(MainActivity.vecTimeTask.get(indx_temp).toString()); // Trujillo 06_03_2016
-
 
                 //Aufgabe j_Auf = MainActivity.aufgb2Eval.get(0);
 

@@ -3,7 +3,7 @@
 <test id="1" lang="deutsch">
 	<aufgaben>
 		<aufgabe id="1">
-			<text>task1</text>
+			<text>Druckabfall mit der Höhe in der Erdatmosphäre</text>
 			<bild>test03aufgabe01</bild>
 			<hilfe>
 				<value>https://www.b-tu.de/</value>
@@ -20,7 +20,7 @@
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="2">
-			<text>task2</text>
+			<text>Körpergröße und Körpermasse</text>
 			<bild>test03aufgabe02</bild>
 			<hilfe>
 				<value>https://www.b-tu.de/</value>
@@ -37,7 +37,7 @@
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="3">
-			<text>task3</text>
+			<text>Anpasssung einer Exponentialfunktion (Fit)</text>
 			<bild>test03aufgabe03</bild>
 			<hilfe>
 				<value>https://www.b-tu.de/</value>
@@ -54,7 +54,7 @@
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="4">
-			<text>task4</text>
+			<text>Schaltkalender auf Exoplanet</text>
 			<bild>test03aufgabe04</bild>
 			<hilfe>
 				<value>https://www.b-tu.de/</value>
@@ -71,7 +71,7 @@
 			<avgdt></avgdt>
 		</aufgabe>
 		<aufgabe id="5">
-			<text>task5</text>
+			<text>Eindimensionale Einheitenumrechnung</text>
 			<bild>test03aufgabe05</bild>
 			<hilfe>
 				<value>https://www.b-tu.de/</value>
@@ -85,91 +85,6 @@
 			<avguf>-2</avguf>
 			<avgdf></avgdf>
 			<avgut>0.5</avgut>
-			<avgdt></avgdt>
-		</aufgabe>
-		<aufgabe id="6">
-			<text>task6</text>
-			<bild>test03aufgabe06</bild>
-			<hilfe>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-			</hilfe>
-			<loesung>test03loesung06</loesung>
-			<time>1</time>
-			<avguc>60</avguc>
-			<avgdc></avgdc>
-			<avguf>2</avguf>
-			<avgdf></avgdf>
-			<avgut>0.6</avgut>
-			<avgdt></avgdt>
-		</aufgabe>
-		<aufgabe id="7">
-			<text>task7</text>
-			<bild>test03aufgabe07</bild>
-			<hilfe>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-			</hilfe>
-			<loesung>test03loesung07</loesung>
-			<time>1</time>
-			<avguc>70</avguc>
-			<avgdc></avgdc>
-			<avguf>1</avguf>
-			<avgdf></avgdf>
-			<avgut>0.7</avgut>
-			<avgdt></avgdt>
-		</aufgabe>
-		<aufgabe id="8">
-			<text>task8</text>
-			<bild>test03aufgabe08</bild>
-			<hilfe>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-			</hilfe>
-			<loesung>test03loesung08</loesung>
-			<time>1</time>
-			<avguc>80</avguc>
-			<avgdc></avgdc>
-			<avguf>0</avguf>
-			<avgdf></avgdf>
-			<avgut>0.8</avgut>
-			<avgdt></avgdt>
-		</aufgabe>
-		<aufgabe id="9">
-			<text>task9</text>
-			<bild>test03aufgabe09</bild>
-			<hilfe>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-			</hilfe>
-			<loesung>test03loesung09</loesung>
-			<time>1</time>
-			<avguc>90</avguc>
-			<avgdc></avgdc>
-			<avguf>-1</avguf>
-			<avgdf></avgdf>
-			<avgut>0.9</avgut>
-			<avgdt></avgdt>
-		</aufgabe>
-		<aufgabe id="10">
-			<text>task10</text>
-			<bild>test03aufgabe10</bild>
-			<hilfe>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-				<value>https://www.b-tu.de/</value>
-			</hilfe>
-			<loesung>test03loesung10</loesung>
-			<time>1</time>
-			<avguc>100</avguc>
-			<avgdc></avgdc>
-			<avguf>-2</avguf>
-			<avgdf></avgdf>
-			<avgut>1</avgut>
 			<avgdt></avgdt>
 		</aufgabe>
 	</aufgaben>

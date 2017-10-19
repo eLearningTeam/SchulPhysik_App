@@ -14,12 +14,16 @@ public class Pool {
 	private int zustand = 0;
 	private int qualifikation;
 	private int empfindung;
+	private String avgUpCorrectness; // Trujillo 05/07/17
+	private String avgUpFeeling; // Trujillo 13/07/17
+	private String avgUpTime; // Trujillo 13/07/17
 
 	public Pool() {
 	// Constructor without parameters	
 	}
 
-	public Pool(int poolTest, int poolAufgb, String imagePool, String hilfe, String iconPoolLsng, String Text, String time, String timeRequired, int zustand, int qlfktn, int empfng) {
+	public Pool(int poolTest, int poolAufgb, String imagePool, String hilfe, String iconPoolLsng, String Text, String time,
+				String timeRequired, int zustand, int qlfktn, int empfng, String avgCorr, String avgFeel, String avgTime) {
 		// Constructor with parameters
 		
 		super();
@@ -34,6 +38,9 @@ public class Pool {
 		this.qualifikation = qlfktn;
 		this.poolTest = poolTest;
 		this.empfindung = empfng;
+		this.avgUpCorrectness = avgCorr;
+		this.avgUpFeeling = avgFeel;
+		this.avgUpTime = avgTime;
 	}
 	
 	//Getters
@@ -78,6 +85,12 @@ public class Pool {
 	public int getPoolTest(){
 		return poolTest;
 	}
+
+	public String getAvgUpCorrectness() { return avgUpCorrectness; }
+
+	public String getAvgUpFeeling() { return avgUpFeeling; }
+
+	public String getAvgUpTime() { return avgUpTime; }
 	
 	//Setters
 	public void setImagePool(String imagePool) {
@@ -122,5 +135,11 @@ public class Pool {
 	public void setPoolTest(int poolTst) {
 		this.poolTest = poolTst;
 	}
+
+	public void setAvgUpCorrectness(String corr) { this.avgUpCorrectness = corr; }
+
+	public void setAvgUpFeeling(String feel) { this.avgUpFeeling = feel; }
+
+	public void setAvgUpTime(String time) { this.avgUpTime = time; }
 }
 
