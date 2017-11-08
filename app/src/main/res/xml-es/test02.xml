@@ -6,8 +6,9 @@
             <text>Tarea 1</text>
             <bild>test02aufgabe01</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test02loesung01</loesung>
             <time>1</time>
@@ -22,8 +23,9 @@
             <text>Tarea 2</text>
             <bild>test02aufgabe02</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test02loesung02</loesung>
             <time>1</time>
@@ -38,8 +40,9 @@
             <text>Tarea 3</text>
             <bild>test02aufgabe03</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test02loesung03</loesung>
             <time>1</time>
@@ -54,8 +57,9 @@
             <text>Tarea 4</text>
             <bild>test02aufgabe04</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test02loesung04</loesung>
             <time>1</time>
@@ -70,8 +74,9 @@
             <text>Tarea 5</text>
             <bild>test02aufgabe05</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test02loesung05</loesung>
             <time>1</time>

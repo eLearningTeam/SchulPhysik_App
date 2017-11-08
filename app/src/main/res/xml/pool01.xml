@@ -6,7 +6,9 @@
 			<text>Task 01</text>
 			<bild>pool01aufgabe01</bild>
 			<hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
 			</hilfe>
 			<loesung>pool01loesung01</loesung>
             <time>1</time>
@@ -21,7 +23,9 @@
             <text>Task 02</text>
             <bild>pool01aufgabe02</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>pool01loesung02</loesung>
             <time>1</time>
@@ -36,7 +40,9 @@
             <text>Task 03</text>
             <bild>pool01aufgabe03</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>pool01loesung03</loesung>
             <time>1</time>
@@ -51,7 +57,9 @@
             <text>Task 04</text>
             <bild>pool01aufgabe04</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>pool01loesung04</loesung>
             <time>1</time>
@@ -66,7 +74,9 @@
             <text>Task 05</text>
             <bild>pool01aufgabe05</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>pool01loesung05</loesung>
             <time>1</time>

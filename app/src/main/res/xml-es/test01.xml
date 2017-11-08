@@ -6,7 +6,9 @@
             <text>Tarea 1</text>
             <bild>test01aufgabe01</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test01loesung01</loesung>
             <time>1</time>
@@ -21,7 +23,9 @@
             <text>Tarea 2</text>
             <bild>test01aufgabe02</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test01loesung02</loesung>
             <time>1</time>
@@ -36,7 +40,9 @@
             <text>Tarea 3</text>
             <bild>test01aufgabe03</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test01loesung03</loesung>
             <time>1</time>
@@ -51,7 +57,9 @@
             <text>Tarea 4</text>
             <bild>test01aufgabe04</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test01loesung04</loesung>
             <time>1</time>
@@ -66,7 +74,9 @@
             <text>Tarea 5</text>
             <bild>test01aufgabe05</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test01loesung05</loesung>
             <time>1</time>

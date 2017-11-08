@@ -6,9 +6,9 @@
             <text>Tarea 1</text>
             <bild>test03aufgabe01</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.spektrum.de/lexikon/physik/druckabfall/3422</value>
+                <value>https://de.wikipedia.org/wiki/Barometrische_H%C3%B6henformel</value>
+                <value>http://deacademic.com/dic.nsf/dewiki/109168/Atmosph%C3%A4rendruck</value>
             </hilfe>
             <loesung>test03loesung01</loesung>
             <time>1</time>
@@ -23,9 +23,9 @@
             <text>Tarea 2</text>
             <bild>test03aufgabe02</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>https://www.mathebibel.de/exponentialgleichungen</value>
+                <value>https://www.frustfrei-lernen.de/mathematik/exponentialgleichungen.html</value>
+                <value>https://www.mathebibel.de/logarithmus</value>
             </hilfe>
             <loesung>test03loesung02</loesung>
             <time>1</time>
@@ -40,9 +40,9 @@
             <text>Tarea 3</text>
             <bild>test03aufgabe03</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>https://www.mathebibel.de/exponentialgleichungen</value>
+                <value>https://www.frustfrei-lernen.de/mathematik/exponentialgleichungen.html</value>
+                <value>https://de.serlo.org/mathe/artikel-und-videos-aus-serlo-1-spaeter-loeschen/substitution</value>
             </hilfe>
             <loesung>test03loesung03</loesung>
             <time>1</time>
@@ -57,9 +57,9 @@
             <text>Tarea 4</text>
             <bild>test03aufgabe04</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>https://kalender-365.de/schaltjahre.php</value>
+                <value>https://de.bettermarks.com/mathe/gleichungen-erkennen-und-aufstellen/</value>
+                <value>https://www.youtube.com/watch?v=RhBQExelsJs</value>
             </hilfe>
             <loesung>test03loesung04</loesung>
             <time>1</time>
@@ -74,9 +74,9 @@
             <text>Tarea 5</text>
             <bild>test03aufgabe05</bild>
             <hilfe>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
-                <value>https://www.b-tu.de/</value>
+                <value>http://www.metric-conversions.org/de/</value>
+                <value>https://www.convertworld.com/de/</value>
+                <value>https://www.einheiten-umrechnen.de/</value>
             </hilfe>
             <loesung>test03loesung05</loesung>
             <time>1</time>
